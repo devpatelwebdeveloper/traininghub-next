@@ -1,0 +1,13 @@
+import { cy } from 'local-cypress';
+
+describe('{{ Name }}', () => {
+  it('should be there', () => {
+    cy.visitStorybook('{{ type }}', {{ name }} , 'Intro');
+    cy.getByTestId('button').should('be.visible');
+  });
+
+  it('intro VRT', function () {
+    cy.visualRegression('{{ type }}', {{ name }} , 'Intro');
+  });
+
+});

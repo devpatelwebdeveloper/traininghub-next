@@ -1,0 +1,13 @@
+{
+  "name": "@traininghub-next/components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Dev Patel",
+  "license": "MIT",
+  "devDependencies": {
+    "plop": "^3.1.1"
+  },
+  "scripts": {
+    "generate":"plop"
+  }
+}
