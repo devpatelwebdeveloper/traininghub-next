@@ -1,12 +1,25 @@
 import React, { ReactNode } from 'react';
-import { {{camelCase name}} } from './styles.css';
+import PropTypes from 'prop-types';
+import styles from "./{{dashCase name}}.module.scss"
 
-const {{pascalCase name}} = ()=>{
+const {{pascalCase name}} = ({color,children})=>{
   return (
-    <div data-testid="{{pascalCase name}}" className={}>
+    <div data-testid="{{pascalCase name}}" className="">
       {children}
     </div>
   );
 };
+
+{{pascalCase name}}.propTypes = {
+  children:PropTypes.string
+};
+
+{{pascalCase name}}.defaultProps = {
+  color:"#00aeef",
+  children:"Lorem ipsum"
+};
+
+
+
 
 export { {{pascalCase name}} as default}

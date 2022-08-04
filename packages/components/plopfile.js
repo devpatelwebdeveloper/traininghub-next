@@ -26,15 +26,15 @@ module.exports = function (plop) {
 
 			actions.push({
 				type: "add",
-				path: "src/{{dashCase name}}/styles.css.js",
-				templateFile: "templates/component.styles.hbs",
+				path: "src/{{dashCase name}}/{{dashCase name}}.module.scss",
+				templateFile: "templates/component.module.scss.hbs",
 				data,
 			});
 
 			actions.push({
 				type: "add",
-				path: "src/{{dashCase name}}/{{dashCase name}}.stories.mdx",
-				templateFile: "templates/component.storybook.hbs",
+				path: "src/{{dashCase name}}/{{dashCase name}}.stories.jsx",
+				templateFile: "templates/component.stories.hbs",
 				data,
 			});
 
@@ -59,15 +59,8 @@ module.exports = function (plop) {
 				data,
 			});
 
-			// actions.push({
-			// 	type: "append",
-			// 	path: "src/index.jsx",
-			// 	template: `export { default as {{pascalCase name}} } from './{{dashCase name}}';`,
-			// 	data,
-			// });
-
 			actions.push({
-				path: "src/index.js",
+				path: "index.js",
 				pattern: /(\/\/ COMPONENT IMPORTS)/g,
 				template:
 					'export { default as {{pascalCase name}} } from "./{{dashCase name}}";',
