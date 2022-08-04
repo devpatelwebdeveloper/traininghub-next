@@ -63,7 +63,7 @@ module.exports = function (plop) {
 				path: "index.js",
 				pattern: /(\/\/ COMPONENT IMPORTS)/g,
 				template:
-					'export { default as {{pascalCase name}} } from "./{{dashCase name}}";',
+					'export { default as {{pascalCase name}} } from "./src/{{dashCase name}}";',
 				type: "append",
 			});
 
